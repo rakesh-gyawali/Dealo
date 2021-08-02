@@ -16,23 +16,26 @@ import {
 export default function App() {
   const { landscape } = useDeviceOrientation();
   return (
-    <View style={{ backgroundColor: "#fff", flex: 1 }}>
+    <View style={{ backgroundColor: "#fff", flexDirection: "row" }}>
       <View
         style={{
           backgroundColor: "dodgerblue",
-          flex: 1,
+          width: 100,
+          height: 100,
         }}
       />
       <View
         style={{
           backgroundColor: "gold",
-          flex: 1,
+          width: 100,
+          height: 100,
         }}
       />
       <View
         style={{
           backgroundColor: "tomato",
-          flex: 1,
+          width: 100,
+          height: 100,
         }}
       />
     </View>
