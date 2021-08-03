@@ -4,4 +4,6 @@ export default {
   black: "#000",
   white: "#fff",
   medium: "#6e6969",
+  light: "#f8f4f4",
+  white_smoke: "#d6d4d4",
 };
