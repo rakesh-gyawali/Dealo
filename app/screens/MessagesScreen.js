@@ -25,9 +25,12 @@ function MessagesScreen(props) {
   //setMessages = the function that let me update the state
   //initialMessages = initial value of the state
   const [messages, setMessages] = useState(initialMessages);
+  //IDK why the hook was created even the state is not changed throughout the app ....
+  //setRefreshing function is not also defined ....
+  const [refreshing, setRefreshing] = useState(false);
 
   const handleDelete = (message) => {
-    //Delete the message from messages
+    //Delete the message from messa`ges
     const newMessages = messages.filter((m) => m.id !== message.id);
     setMessages(newMessages);
   };
@@ -48,6 +51,19 @@ function MessagesScreen(props) {
           />
         )}
         ItemSeparatorComponent={ListItemSeparator}
+        //this still works if I replace with false, but doesnt work if delete the line itself ...
+        //value of refreshing did not change while debugging ...
+        refreshing={refreshing}
+        onRefresh={() =>
+          setMessages([
+            {
+              id: 2,
+              title: "Updated Message",
+              description: "D2",
+              image: require("../assets/men.jpg"),
+            },
+          ])
+        }
       />
     </Screen>
   );

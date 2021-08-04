@@ -2,13 +2,15 @@ import React from "react";
 import Constants from "expo-constants";
 import { StyleSheet, SafeAreaView } from "react-native";
 
-function Screen({ children }) {
-  return <SafeAreaView style={styles.screen}>{children}</SafeAreaView>;
+//This screen component is created to add padding on top on the basis of Platform
+function Screen({ children, style }) {
+  return <SafeAreaView style={[styles.screen, style]}>{children}</SafeAreaView>;
 }
 
 const styles = StyleSheet.create({
   screen: {
     paddingTop: Constants.statusBarHeight,
+    flex: 1,
   },
 });
 
