@@ -7,13 +7,14 @@ import ErrorMessage from "../forms/ErrorMessage";
 //created to encapsulate AppTextInput common properties e.g. onBlur and onChangeText ...
 //Assume this is AppTextInput with onChangeText to  validation mesaage ...
 
-function AppFormField({ name, ...otherProps }) {
+function AppFormField({ name, width, ...otherProps }) {
   const { setFieldTouched, handleChange, errors, touched } = useFormikContext();
   return (
     <>
       <AppTextInput
         onBlur={() => setFieldTouched(name)}
         onChangeText={handleChange(name)}
+        width={width}
         {...otherProps}
       />
       <ErrorMessage error={errors[name]} visible={touched[name]} />
