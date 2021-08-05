@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 
-import AppText from "./AppText";
+import AppText from "../AppText";
 //created to whether return error message or not ...
 //Here, visible becomes true if the inputTextField is touched
 export default function ErrorMessage({ error, visible }) {

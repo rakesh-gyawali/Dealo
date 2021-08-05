@@ -1,7 +1,7 @@
 import React from "react";
 import { useFormikContext } from "formik";
 
-import AppButton from "./AppButton";
+import AppButton from "../AppButton";
 //As onPress={handleSubmit} was going to be repeated everywhere, it has been encapsulated to reduce code complexity ...
 function SubmitButton({ title }) {
   const { handleSubmit } = useFormikContext();
